@@ -8,7 +8,7 @@ package cashregister;
  *
  * @author Peter
  */
-public class CashRegister {
+public class StartUp {
 
     /**
      * @param args the command line arguments
