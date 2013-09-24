@@ -8,11 +8,11 @@ package cashregister;
  *
  * @author Peter
  */
-public class ItemData {
-    private Item[] items;
+public class FakeDB implements DatabaseManager{
+    private LineItem[] items;
     private int curIndex = 0;
     
-    public void addItem(Item i) {
+    public void addItem(LineItem i) {
         if(i == null) {
             return;
         }
@@ -21,5 +21,8 @@ public class ItemData {
         curIndex++;
     }
     
+    public LineItem[] getItemList() {
+        return this.items;
+    }
     
 }

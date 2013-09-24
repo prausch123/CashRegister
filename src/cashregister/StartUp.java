@@ -14,6 +14,11 @@ public class StartUp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        CashRegister cr = new CashRegister();
+        
+        cr.startNewTransaction("001", new FakeDB());
+        cr.addNewItem("A111", 2);
+        cr.addNewItem("A112", 1);
+        cr.completeTransaction();
     }
 }
