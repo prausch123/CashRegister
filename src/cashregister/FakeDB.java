@@ -1,5 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
+/* * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package cashregister;
@@ -9,20 +8,19 @@ package cashregister;
  * @author Peter
  */
 public class FakeDB implements DatabaseManager{
-    private LineItem[] items;
-    private int curIndex = 0;
+    private Product[] products = {
+        new Product("A111", "Men's Hat", 19.99, new MultipleItemDiscount(19.99, 5)),
+        new Product("A112", "Men's Shirt", 25.00, new FlatRateDiscount(25.00)),
+        new Product("A113", "Womens Pants", 30.00, new NoDiscount())
+    };
     
-    public void addItem(LineItem i) {
-        if(i == null) {
-            return;
-        }
-        
-        items[curIndex] = i;
-        curIndex++;
-    }
+    private Customer[] customers = {
+        new Customer("001", "John", "Smith"),
+        new Customer("002", "Jane", "Doe")
+    };
     
-    public LineItem[] getItemList() {
-        return this.items;
-    }
+    
+    
+    
     
 }

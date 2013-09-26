@@ -24,12 +24,7 @@ public class CashRegister {
     }
     
     public void addNewItem(String prodID, int qty) {
-        if(prodID == "") {
-            System.out.println(NEW_ITEM_ERROR);
-            return;
-        }
         
-        r.addLineItem(prodID, qty);
     }
     
     public void completeTransaction() {

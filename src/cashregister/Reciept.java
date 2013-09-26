@@ -17,8 +17,5 @@ public class Reciept {
         this.dm = dm;
     }
     
-    public void addLineItem(String prodID, int qty) {
-        LineItem l = new LineItem(prodID, qty);
-        dm.addItem(l);
-    }
+    
 }

@@ -9,8 +9,5 @@ package cashregister;
  * @author Peter
  */
 public interface DatabaseManager {
-    
-    public abstract void addItem(LineItem i);
-    
-    public abstract LineItem[] getItemList();
+  
 }

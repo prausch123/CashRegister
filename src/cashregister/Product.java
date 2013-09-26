@@ -12,11 +12,13 @@ public class Product {
     private String prodID;
     private String prodName;
     private double prodPrice;
+    private DiscountStrategy discount;
     
-    public Product(String prodID, String prodName, double prodPrice) {
+    public Product(String prodID, String prodName, double prodPrice, DiscountStrategy discount) {
         this.prodID = prodID;
         this.prodName = prodName;
         this.prodPrice = prodPrice;
+        this.discount = discount;
     }
 
     public String getProdID() {
