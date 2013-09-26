@@ -20,15 +20,15 @@ public class CashRegister {
             return;
         } 
         
-        r = new Reciept(custID, dm);
+        r = new Reciept(custID);
     }
     
     public void addNewItem(String prodID, int qty) {
-        
+        r.newItem(prodID, qty);
     }
     
     public void completeTransaction() {
-        
+        r.displayFinalReciept();
     }
     
 }

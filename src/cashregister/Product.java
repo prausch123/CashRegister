@@ -24,6 +24,10 @@ public class Product {
     public String getProdID() {
         return prodID;
     }
+    
+    public DiscountStrategy getDiscountStrat() {
+        return this.discount;
+    }
 
     public void setProdID(String prodID) {
         this.prodID = prodID;

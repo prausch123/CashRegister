@@ -9,5 +9,7 @@ package cashregister;
  * @author Peter
  */
 public interface DatabaseManager {
-  
+    public abstract Customer findCustomer(String custID);
+    
+    public abstract Product findProduct(String prodID);
 }

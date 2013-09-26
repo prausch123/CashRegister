@@ -19,8 +19,25 @@ public class FakeDB implements DatabaseManager{
         new Customer("002", "Jane", "Doe")
     };
     
+    public Customer findCustomer(String custID) {
+        Customer cust = null;
+        for(Customer c : customers) {
+            if(custID.equalsIgnoreCase(c.getCustID())) {
+                cust = c;
+            }
+        }
+        
+        return cust;
+    }  
     
-    
-    
-    
+    public Product findProduct(String prodID) {
+        Product prod = null;
+        for(Product p : products) {
+            if(prodID.equalsIgnoreCase(p.getProdID())) {
+                prod = p;
+            }
+        }
+        
+        return prod;
+    }
 }
